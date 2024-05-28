@@ -32,3 +32,18 @@ console.log("DURACION:" ,duration);
 console.log("AUTOR:" ,author);
 console.log("AUTOR:" ,autor);
 //console.log("AUTOR:" ,audioPlayer.details.author);
+
+
+
+
+//Desestructuracion de arreglos
+
+// const dbz: string[]=["goku",'Vegeta','Trunk'];
+//con vaLOR POR DEFECTO
+const [p1,p2,p3 ='not found']: string[]=["goku",'Vegeta','Trunk'];
+
+
+console.log('Personaje 3: ',p1);
+
+
+// console.log('Personaje 3: ',dbz[2]);
