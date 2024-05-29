@@ -20,27 +20,31 @@ interface TaxCalculationOptions{
     tax:number;
     products:Product[];
 }
-
-function taxCalculation(options:TaxCalculationOptions):number[]{
+// function taxCalculation(options:TaxCalculationOptions):[number,number]{
+    // function taxCalculation({tax,products}:TaxCalculationOptions):[number,number]{
+        function taxCalculation(options:TaxCalculationOptions):[number,number]{
+            const {tax,products}=options;
     let total=0;
-    options.products.forEach(product => {
-        total+=product.price;
+    // options.products.forEach(({price}) => {
+        products.forEach(({price}) => {
+        total+=price;
     });
-    return [total,total*options.tax];
+    // return [total,total*options.tax];
+    return [total,total*tax];
 }
 
 
 const shoppingCart=[phone,tablet];
-const tax=0.15;
 
-const result = taxCalculation({
+
+const [total,taxTotal] = taxCalculation({
     products:shoppingCart,
     //al tener el mismo nombre se coge automaticamente la variable, se asume 
-    tax,
+    tax:0.15
 })
 
-console.log('Total',result[0]);
-console.log('Tax',result[1]);
+console.log('Total',total);
+console.log('Tax',taxTotal);
 
 //TAREA
 //Desestructuracion en tiodo el ejercicios hasta donde se pueda
