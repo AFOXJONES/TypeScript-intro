@@ -1,15 +1,17 @@
 export class Person{
-    public name:string ;
-    public address:string;
+    // public name:string ;
+    // public address:string;
 
-    constructor(){
-        this.name="Sin nombre";
-        this.address="Spain"
+
+
+    constructor(public name:string, public address:string='No address'){
+        // this.name=name;
+        // this.address=address
     }
 }
 
 
 
-const ironman=new Person();
+const ironman=new Person("pepe","spain");
 
 console.log(ironman);
