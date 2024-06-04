@@ -9,10 +9,10 @@ export function whatsMyType<T>(argument:T ): T{
 
 
 const amIString = whatsMyType<string>('Hola Mundo');
-const amINumber = whatsMyType<string>(100);
-const amIArray = whatsMyType([1,2,3,4,5]);
+// const amINumber = whatsMyType<string>(100);
+// const amIArray = whatsMyType([1,2,3,4,5]);
 
 
 console.log(amIString.split(' '));
-console.log(amINumber.split(' '));
-console.log(amIArray.split(' '));
+// console.log(amINumber.split(' '));
+// console.log(amIArray.split(' '));
